@@ -22,9 +22,9 @@ public class AgeEnumTest {
     }
 
     @Test
-    void 연령Enum조회_예외발생_연령대가10대인경우(){
+    void 연령Enum조회_예외발생_연령대가10세미만인경우(){
         // given
-        int age = 19;
+        int age = 9;
 
         // when
         Assertions.assertThatThrownBy(() -> AgeEnum.getAgeEnum(age))

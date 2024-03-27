@@ -18,8 +18,8 @@ public class ResultController {
     private final ResultService resultService;
 
     @PostMapping("")
-    public ApiResponse<ResultResponseDTO> saveResult(@RequestBody AnswerListRequestDTO answerListRequestDTO){
-        return ApiResponse.success(Success.CREATE_RESULT_SUCCESS,resultService.saveResult(answerListRequestDTO));
+    public ApiResponse<ResultResponseDTO> saveResult(@RequestBody AnswerListRequestDTO answerListRequestDTO) {
+        return ApiResponse.success(Success.CREATE_RESULT_SUCCESS, resultService.saveResult(answerListRequestDTO));
     }
 
     @GetMapping("/{memberId}")
