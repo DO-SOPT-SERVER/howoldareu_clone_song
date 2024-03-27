@@ -18,13 +18,13 @@ public class AgeEnumTest {
         AgeEnum ageEnum = AgeEnum.getAgeEnum(age);
 
         // then
-        Assertions.assertThat(ageEnum.getAge()).isEqualTo(20);
+        Assertions.assertThat(ageEnum.getMinAge()).isEqualTo(20);
     }
 
     @Test
-    void 연령Enum조회_예외발생_연령대가10단위가아닌경우(){
+    void 연령Enum조회_예외발생_연령대가10대인경우(){
         // given
-        int age = 21;
+        int age = 19;
 
         // when
         Assertions.assertThatThrownBy(() -> AgeEnum.getAgeEnum(age))
