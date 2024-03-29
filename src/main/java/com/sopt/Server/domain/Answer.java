@@ -2,6 +2,7 @@ package com.sopt.Server.domain;
 
 import jakarta.persistence.*;
 import lombok.AccessLevel;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
@@ -21,4 +22,10 @@ public class Answer {
 
     private int answerScore;
 
+    @Builder
+    public Answer(Question question, boolean answerType, int answerScore) {
+        this.question = question;
+        this.answerType = answerType;
+        this.answerScore = answerScore;
+    }
 }
